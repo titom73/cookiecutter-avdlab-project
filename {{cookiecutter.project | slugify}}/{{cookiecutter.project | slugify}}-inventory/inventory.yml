@@ -12,6 +12,7 @@ all:
       vars:
         ansible_user: arista
         ansible_ssh_pass: arista
+        demo: "{{ cookiecutter.oob_subnet | demo(2) }}"
       children:
         ATD_FABRIC:
           children:
